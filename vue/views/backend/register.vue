@@ -1,0 +1,53 @@
+<template>
+<div>
+    <header-admin></header-admin>
+
+        <div class="container" style="margin-top:30px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Register</strong></h3></div>
+
+            <div class="panel-body">
+                <form role="form">
+                <!--    {% if errors %}
+                        {% for error in errors %}
+                            <div class="alert alert-danger"><a class="close" data-dismiss="alert" href="#">×</a>
+                            {{ error.msg }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}-->
+
+                    <div class="form-group">
+                        <input type="text" name="display_name" id="display_name" class="form-control "
+                               placeholder="Display Name" tabindex="3">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control " placeholder="Email Address"
+                               tabindex="4">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" class="form-control "
+                                       placeholder="Password" tabindex="5">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="password_confirmation" id="password_confirmation"
+                                       class="form-control " placeholder="Confirm Password" tabindex="6">
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <myfooter></myfooter>
+</div>
+    
+</template>

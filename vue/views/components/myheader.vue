@@ -47,7 +47,7 @@
                 <div class="banner-top">
                     <div class="banner-text">
                         <h2>Aliquam erat</h2>
-                        <h1>Suspendisse potenti</h1>
+                        <h1 >posts</h1>
                         <div class="banner-btn">
                             <a href="/single">Read More</a>
                         </div>
@@ -61,8 +61,6 @@
 
 <script>
     export default{
-        data () {
-            return {}
-        }
+        props: ['posts'],
     }
 </script>

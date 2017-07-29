@@ -70,16 +70,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <script src="/js/modernizr.custom.97074.js"></script>
         <script src="/js/jquery.chocolat.js"></script>
         <script type="text/javascript" src="/js/jquery.hoverdir.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js"></script>
         <link rel="stylesheet" href="/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
         <!--light-box-files -->
         <script type="text/javascript" charset="utf-8">
             $(function () {
                 $('.gallery a').Chocolat();
 
-                 $(' #da-thumbs > li ').each(function () {
+                $(' #da-thumbs > li ').each(function () {
                     $(this).hoverdir();
                 });
-                $('#post-description').trumbowyg();
                 $('#post-content').trumbowyg();
             });
         </script>

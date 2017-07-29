@@ -13,26 +13,21 @@ module.exports = (sequelize, DataType) => {
             allowNULL: false,
             unique: true
         },
+        email: {
+            type: DataType.STRING,
+            allowNULL: false
+        },
         displayname: {
             type: DataType.STRING,
             allowNULL: false
         },
         password: {
             type: DataType.STRING,
-            allowNULL:false
+            allowNULL: false
         }
     }, {
-            freezeTableName: true,
-            hooks: {
-                beforeCreate: (user, op, fn) => {
-                    bcrypt.hash(user.password, 10, (err, hash) => {
-                        if (err) throw err;
-                        user.password = hash;
-                        fn(null,user)
-                })
-            }
-        }    
-        })
+        freezeTableName: true,
+    })
     User.sync();
     return User
 }

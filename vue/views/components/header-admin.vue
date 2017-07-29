@@ -17,15 +17,14 @@
                         <span class="menu"></span>
                         <ul class="navig">
                             <li><a href="/" class="active">Home</a></li>
-                            <li><a href="/admin/register">Register</a></li>
-                            <li><a href="/admin/posts">Posts</a></li>
-                            <li><a href="/admin/post-list">Post-List</a></li>
-                            
+                            <li><a href="/admin/user">User</a></li>
+                            <li><a href="/admin/post-list">Post</a></li>
+
                         </ul>
                     </div>
                     <div class="header-right">
-                        
-                        <ul class="navig">
+
+                        <ul class="navig" >
                             <li><a href="/admin/logout">Logout</a></li>
                         </ul>
                     </div>
@@ -39,7 +38,9 @@
 <script>
     export default{
         data () {
-            return {}
+            return {
+
+            }
         }
     }
 </script>

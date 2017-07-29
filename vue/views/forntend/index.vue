@@ -1,6 +1,6 @@
 <template>
     <div>
-        <myheader></myheader>
+        <myheader :posts="posts"></myheader>
 
         <!--about-starts-->
         <div class="about">
@@ -9,17 +9,19 @@
                     <div class="col-md-8 about-left">
                         <div class="about-one">
                             <p>Find The Most</p>
-                            <h3>Coffee of the month</h3>
+                            <h3>{{ posts[1].title }}</h3>
                         </div>
                         <div class="about-two">
-                            <a href="/single"><img src="images/c-1.jpg" alt=""/></a>
-                            <p>Posted by <a href="#">Johnson</a> on 10 feb, 2015 <a href="#">comments(2)</a></p>
-                            <p>
-                                Phasellus fringilla enim nibh, ac pharetra nulla vestibulum ac. Donec tempor fermentum felis, non placerat sem ultrices ut. Nam molestie nunc nec felis hendrerit, in pulvinar arcu mollis. Quisque eget purus nec velit venenatis tincidunt vitae ac massa. Proin vel ornare tellus. Duis consectetur gravida tellus ut varius. Aenean tellus massa, laoreet ut euismod et, pretium id ex. Mauris hendrerit suscipit hendrerit.</p>
-                            <p>
-                                Quisque ultrices ligula a nisl porttitor, vitae porta tortor eleifend. Nulla nec imperdiet ipsum, ut cursus mauris. Proin ut sodales sem, quis vestibulum libero. Proin tempor venenatis congue. Phasellus mollis massa sit amet pharetra consequat. Aliquam quis lacus at sapien tempor semper. Sed ultrices et metus et elementum. Nunc sed justo at erat consequat mollis et eu lectus.</p>
+                            <a :href="'/single/'+posts[1].id"><img :src="'image-posts/'+posts[1].img" alt=""/></a>
+                            
+                            <p>Posted by <a href="#">{{posts[1].User.displayname}}</a>{{ posts[1].created }}<a href="#">comments(2)</a></p>
+                            
+                            <p> 
+                               {{ posts[1].description }}
+                            </p>
+
                             <div class="about-btn">
-                                <a href="/single">Read More</a>
+                                <a :href="'/single/'+posts[1].id">Read More</a>
                             </div>
                             <ul>
                                 <li><p>Share : </p></li>
@@ -30,7 +32,7 @@
                                 <li><a href="#"><span class="drbl"> </span></a></li>
                             </ul>
                         </div>
-                        <index-list></index-list>
+                        <index-list :posts="posts"></index-list>
                     </div>
                     <div class="col-md-4 about-right heading">
                         <div class="abt-1">
@@ -116,31 +118,33 @@
 <script>
     export default{
         data (){
-            return{
-                data:{
-                        text:`Lorem Ipsum is simply dummy text of
+            return {
+                data: {
+                    text: `Lorem Ipsum is simply dummy text of
                         the printing and typesetting industry.`,
 
-                        text1:`Lorem Ipsum has been the industry'
+                    text1: `Lorem Ipsum has been the industry'
                         s standard dummy text ever since the 1500s`,
 
-                        text2:`When an unknown printer took a galley of type and
+                    text2: `When an unknown printer took a galley of type and
                         scrambled it to make a type specimen book.`,
-                        
-                        text3:`It has survived not only five
+
+                    text3: `It has survived not only five
                         centuries, but also the leap into electronic typesetting`,
 
-                        text4:`Remaining essentially
+                    text4: `Remaining essentially
                         unchanged. It was popularised in the 1960s with the release of`,
 
-                        text5:`Software like Aldus
+                    text5: `Software like Aldus
                         PageMaker including versionsof Lorem Ipsum.`,
-                        
-                        text6:`It has survived not only five
+
+                    text6: `It has survived not only five
                         centuries, but also the leap into electronic typesetting`
 
-                    }
+                },
+                posts : []
             }
         }
+
     }
 </script>

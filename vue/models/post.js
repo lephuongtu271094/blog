@@ -14,23 +14,26 @@ module.exports = (sequelize, DataType) => {
             type: DataType.TEXT,
             allowNULL: false
         },
-        img:{
+        img: {
             type: DataType.STRING
         },
+        img_url: {
+            type: DataType.TEXT
+        },
         description: {
-            type: DataType.STRING
+            type: DataType.TEXT
         },
         author: {
             type: DataType.INTEGER
         },
         type: {
-            type : DataType.STRING
+            type: DataType.STRING
         }
     }, {
-            updatedAt: 'updated',
-            createdAt: 'created',
-            freezeTableName: true
-        })
+        updatedAt: 'updated',
+        createdAt: 'created',
+        freezeTableName: true
+    })
     Post.sync();
     return Post
 }
